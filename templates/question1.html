@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+    <h1>Question 1</h1>
+
+    <div class="code-container">
+        <div class="code-box">
+            <h3>Python:</h3>
+            <pre>def add(a, b):
+    return a + b
+
+print(add(10, 5))</pre>
+        </div>
+
+        <div class="code-box">
+            <h3>Java:</h3>
+            <pre>public class Main {
+    public static void main(String[] args) {
+        System.out.println(10 + 5);
+    }
+}</pre>
+        </div>
+
+        <div class="code-box">
+            <h3>C++:</h3>
+            <pre>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout << 10 + 5 << endl;
+}</pre>
+        </div>
+    </div>
+
+    <form method="POST">
+        <h2>Your Solution:</h2>
+        <textarea class="solution-box" name="solution" rows="6" placeholder="Enter your solution here..." required></textarea>
+        <button type="submit">Submit Answer</button>
+    </form>
+
+    {% if error %}
+    <p id="response-message">Incorrect answer, please try again.</p>
+    {% endif %}
+</body>
+</html>
